@@ -2,7 +2,8 @@
 
 namespace Arados\Settings;
 
-use Barryvdh\Debugbar\ServiceProvider;
+
+use Illuminate\Support\ServiceProvider;
 
 class SettingsServiceProvider extends ServiceProvider
 {
