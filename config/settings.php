@@ -6,24 +6,21 @@ return [
     | Default Settings Driver
     |--------------------------------------------------------------------------
     |
-    | Here you can define the default driver to store settings.
-    |
-    | Supported: "file", "database"
+    | Default settings storage driver. Supported drivers: "file", "database"
     |
     */
-    'default' => env('SETTINGS_DRIVER', 'file'),
+    'default' => env('SETTINGS_DRIVER', 'database'),
 
     /*
     |--------------------------------------------------------------------------
     | Caching
     |--------------------------------------------------------------------------
     |
-    | Enable or disable settings cache. Expiration time is in minutes.
+    | Enable or disable settings cache.
     |
     */
     'cache'   => [
-        'enable'          => false,
-        'expiration_time' => 60 * 24
+        'enable' => true,
     ],
 
     /*

@@ -2,8 +2,37 @@
 
 namespace Arados\Settings\Repositories;
 
+use Illuminate\Database\DatabaseManager;
+use Illuminate\Support\Arr;
+
 class DatabaseRepository extends BaseRepository
 {
+    /**
+     * Database manager instance.
+     *
+     * @var DatabaseManager
+     */
+    protected $database;
+
+    /**
+     * Repository database table name.
+     *
+     * @var string
+     */
+    protected $table;
+
+    /**
+     * DatabaseRepository constructor.
+     *
+     * @param $database
+     * @param $table
+     */
+    public function __construct($database, $table)
+    {
+        $this->database = $database;
+        $this->table = $table;
+    }
+
     /**
      * Read settings from the storage.
      *
@@ -11,7 +40,16 @@ class DatabaseRepository extends BaseRepository
      */
     public function read()
     {
-        // TODO: Implement read() method.
+        $settings = $this->database->table($this->table)
+            ->pluck('value', 'key')->toArray();
+
+        $data = [];
+
+        foreach ($settings as $key => $value) {
+            Arr::set($data, $key, $value);
+        }
+
+        return $data;
     }
 
     /**
@@ -21,6 +59,14 @@ class DatabaseRepository extends BaseRepository
      */
     public function write()
     {
-        // TODO: Implement write() method.
+        $this->database->table($this->table)->delete();
+
+        foreach (Arr::dot($this->settings) as $key => $value) {
+            $this->database->table($this->table)
+                ->updateOrInsert(['key' => $key], [
+                    'key'   => $key,
+                    'value' => $value,
+                ]);
+        }
     }
 }
