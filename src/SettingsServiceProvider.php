@@ -2,8 +2,8 @@
 
 namespace Arados\Settings;
 
-use Arados\Settings\Console\MakeTableCommand;
 use Illuminate\Support\ServiceProvider;
+use Arados\Settings\Console\MakeTableCommand;
 
 class SettingsServiceProvider extends ServiceProvider
 {
@@ -67,7 +67,7 @@ class SettingsServiceProvider extends ServiceProvider
      */
     protected function registerConfig()
     {
-        $path = realpath(__DIR__ . '/../config/settings.php');
+        $path = realpath(__DIR__.'/../config/settings.php');
         $this->mergeConfigFrom($path, 'settings');
         $this->publishes([$path => config_path('settings.php')], 'config');
     }

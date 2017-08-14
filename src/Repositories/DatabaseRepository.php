@@ -2,8 +2,8 @@
 
 namespace Arados\Settings\Repositories;
 
-use Illuminate\Database\DatabaseManager;
 use Illuminate\Support\Arr;
+use Illuminate\Database\DatabaseManager;
 
 class DatabaseRepository extends BaseRepository
 {

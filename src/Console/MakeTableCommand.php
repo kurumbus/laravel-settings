@@ -21,7 +21,6 @@ class MakeTableCommand extends Command
      */
     protected $app;
 
-
     /**
      * MakeTableCommand constructor.
      *
@@ -42,12 +41,12 @@ class MakeTableCommand extends Command
     public function fire()
     {
         $table = $this->app['config']->get('settings.drivers.database.table');
-        $stub = $this->app['files']->get(realpath(__DIR__ . '/stubs/migration.stub'));
+        $stub = $this->app['files']->get(realpath(__DIR__.'/stubs/migration.stub'));
 
         $stub = str_replace('{table}', $table, $stub);
-        $name = date('Y_m_d_hms_') . 'create_settings_table.php';
+        $name = date('Y_m_d_hms_').'create_settings_table.php';
 
-        $this->app['files']->put(database_path('migrations/' . $name), $stub);
+        $this->app['files']->put(database_path('migrations/'.$name), $stub);
 
         $this->info('Settings migration is created. Don\'t forget to migrate!');
     }
