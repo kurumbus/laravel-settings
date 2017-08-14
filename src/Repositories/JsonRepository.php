@@ -2,7 +2,6 @@
 
 namespace Arados\Settings\Repositories;
 
-use Exception;
 use Illuminate\Filesystem\Filesystem;
 
 class JsonRepository extends BaseRepository
@@ -49,14 +48,9 @@ class JsonRepository extends BaseRepository
      * Write settings to the storage.
      *
      * @return void
-     * @throws Exception
      */
     public function write()
     {
-        if (!$this->filesystem->isWritable($this->path)) {
-            throw new Exception('Settings file is not writable.');
-        }
-
         $this->filesystem->put($this->path, json_encode($this->settings));
     }
 }
