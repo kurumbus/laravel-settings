@@ -1,4 +1,10 @@
 # Laravel 5 Persistent Settings
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mohd-isa/laravel-settings.svg)](https://github.com/mohd-isa/laravel-settings/releases)
+[![Latest Version on Packagist](https://img.shields.io/packagist/dt/mohd-isa/laravel-settings.svg)](https://packagist.org/packages/mohd-isa/laravel-settings)
+[![Build Status](https://travis-ci.org/mohd-isa/laravel-settings.svg?branch=master)](https://travis-ci.org/mohd-isa/laravel-settings)
+[![StyleCI](https://styleci.io/repos/85192346/shield)](https://styleci.io/repos/85192346)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+
 Store and manage application wide settings for Laravel 5. Supports multiple and custom storage drivers.
 
 ## Installation
@@ -154,4 +160,4 @@ If you discover any security related issues, please email mohd.itcs@gmail.com in
 * [All Contributors](https://github.com/mohd-isa/laravel-settings/graphs/contributors)
 
 ## License
-The [MIT License (MIT)](https://github.com/arados-io/laravel-settings/blob/master/LICENSE.md). Please see License File for more information.
+The [MIT License (MIT)](https://github.com/mohd-isa/laravel-settings/blob/master/LICENSE.md). Please see License File for more information.
