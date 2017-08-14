@@ -2,7 +2,6 @@
 
 namespace Arados\Settings\Test;
 
-use Arados\Settings\Repositories\FileRepository;
 use Arados\Settings\Repositories\JsonRepository;
 
 class JsonRepositoryTest extends BaseRepositoryTest
@@ -15,7 +14,7 @@ class JsonRepositoryTest extends BaseRepositoryTest
     {
         parent::setUp();
 
-        $this->path = sys_get_temp_dir() . '/settings.json';
+        $this->path = sys_get_temp_dir().'/settings.json';
         $this->filesystem = $this->app['files'];
         $this->settings = new JsonRepository($this->filesystem, $this->path);
     }

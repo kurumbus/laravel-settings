@@ -53,7 +53,7 @@ class JsonRepository extends BaseRepository
      */
     public function write()
     {
-        if (!$this->filesystem->isWritable($this->path)) {
+        if (! $this->filesystem->isWritable($this->path)) {
             throw new Exception('Settings file is not writable.');
         }
 

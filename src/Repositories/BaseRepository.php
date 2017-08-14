@@ -2,9 +2,9 @@
 
 namespace Arados\Settings\Repositories;
 
-use Arados\Settings\Contracts\Repository;
-use Arados\Settings\Contracts\Settings;
 use Illuminate\Support\Arr;
+use Arados\Settings\Contracts\Settings;
+use Arados\Settings\Contracts\Repository;
 
 abstract class BaseRepository implements Repository
 {
@@ -164,7 +164,7 @@ abstract class BaseRepository implements Repository
      */
     protected function isCachingEnabled()
     {
-        return !is_null($this->cache);
+        return ! is_null($this->cache);
     }
 
     /**
