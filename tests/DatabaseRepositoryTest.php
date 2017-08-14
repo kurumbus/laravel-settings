@@ -12,7 +12,7 @@ class DatabaseRepositoryTest extends BaseRepositoryTest
 
         $this->loadMigrationsFrom([
             '--database' => 'testing',
-            '--realpath' => realpath(__DIR__ . '/migration'),
+            '--realpath' => realpath(__DIR__.'/migration'),
         ]);
 
         $this->settings = new DatabaseRepository($this->app['db'], 'settings');

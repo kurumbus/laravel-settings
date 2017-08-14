@@ -2,9 +2,9 @@
 
 namespace Arados\Settings;
 
-use Arados\Settings\Repositories\DatabaseRepository;
-use Arados\Settings\Repositories\JsonRepository;
 use Illuminate\Support\Manager;
+use Arados\Settings\Repositories\JsonRepository;
+use Arados\Settings\Repositories\DatabaseRepository;
 
 class SettingsManager extends Manager
 {
@@ -51,6 +51,6 @@ class SettingsManager extends Manager
      */
     public function config($key, $default = null)
     {
-        return $this->app['config']->get('settings.' . $key, $default);
+        return $this->app['config']->get('settings.'.$key, $default);
     }
 }
