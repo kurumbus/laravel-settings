@@ -2,10 +2,10 @@
 
 namespace Arados\Settings;
 
-use Arados\Settings\Console\MakeTableCommand;
-use Arados\Settings\Generators\BladeSettingsGenerator;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Arados\Settings\Console\MakeTableCommand;
+use Arados\Settings\Generators\BladeSettingsGenerator;
 
 class SettingsServiceProvider extends ServiceProvider
 {
@@ -70,7 +70,7 @@ class SettingsServiceProvider extends ServiceProvider
      */
     protected function registerConfig()
     {
-        $path = realpath(__DIR__ . '/../config/settings.php');
+        $path = realpath(__DIR__.'/../config/settings.php');
         $this->mergeConfigFrom($path, 'settings');
         $this->publishes([$path => config_path('settings.php')], 'config');
     }
@@ -83,7 +83,7 @@ class SettingsServiceProvider extends ServiceProvider
     protected function registerBladeDirectives()
     {
         Blade::directive('settings', function () {
-            return "<?php echo app('" . BladeSettingsGenerator::class . "')->generate(); ?>";
+            return "<?php echo app('".BladeSettingsGenerator::class."')->generate(); ?>";
         });
     }
 }
