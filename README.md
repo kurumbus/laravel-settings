@@ -29,7 +29,8 @@ php artisan vendor:publish --provider="Arados\Settings\SettingsServiceProvider" 
 * Multiple storage drivers support
 * Caching
 * Support custom drivers
-* Helper function
+* PHP and Javascript Helper Functions
+* Whitelist or Blacklist Settings
 
 ## Usage
 ### Set Method
@@ -84,7 +85,7 @@ Removes all settings.
 Settings::flush();
 ````
 
-### Helper Function
+### PHP Helper Function
 Helper function is a handy function to set or get values from the setting storage. It accepts two parameters, key and default. Depends on the arguments number, set or get will be decided.
 
 * Get
@@ -110,6 +111,11 @@ settings([
    ]
 ])
 ````
+
+### Javascript Helper Function
+In order to use javascript helper function, you only have to use ``@settings`` custom directive in your blade files. This will allow you to access the settings through ```settings(key, default)``` javascript helper function.
+
+If you don't want to allow access to sensetive settings values, use blacklist or whitelist configuration options in ```settings.php```
 
 ### Custom Drivers
 
