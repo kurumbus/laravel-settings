@@ -117,6 +117,8 @@ In order to use javascript helper function, you only have to use ``@settings`` c
 
 If you don't want to allow access to sensetive settings values, use blacklist or whitelist configuration options in ```settings.php```
 
+You can use dot notation to blacklist or whitelist multiple settings.
+
 ### Custom Drivers
 
 The package allows you to implement your own custom driver without the need of modifying its underlying code.
