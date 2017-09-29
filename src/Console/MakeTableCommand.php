@@ -38,7 +38,7 @@ class MakeTableCommand extends Command
      *
      * @return void
      */
-    public function fire()
+    public function handle()
     {
         $table = $this->app['config']->get('settings.drivers.database.table');
         $stub = $this->app['files']->get(realpath(__DIR__.'/stubs/migration.stub'));
