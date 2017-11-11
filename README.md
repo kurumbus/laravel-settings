@@ -24,6 +24,10 @@ Publish the configurations file to customize the package
 ```
 php artisan vendor:publish --provider="Arados\Settings\SettingsServiceProvider" --tag="config"
 ```
+If you are going to use database driver, publish the table using the following command
+```
+php artisan settings:table
+```
 
 ## Features
 * Multiple storage drivers support
