@@ -41,5 +41,15 @@
     "psr-4": {
       "Arados\\Settings\\Test\\": "tests"
     }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Arados\\Settings\\SettingsServiceProvider"
+      ],
+      "aliases": {
+        "Settings": "Arados\\Settings\\Facades\\Settings" 
+      }
+    }
   }
 }
