@@ -70,7 +70,7 @@ abstract class BaseRepository implements Repository
     {
         $this->isLoaded();
 
-        if ($value == null) {
+        if (empty($value) && is_array($key)) {
             foreach ($key as $k => $v) {
                 Arr::set($this->settings, $k, $v);
             }
