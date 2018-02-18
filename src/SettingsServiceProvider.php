@@ -1,11 +1,11 @@
 <?php
 
-namespace Arados\Settings;
+namespace Smartisan\Settings;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Arados\Settings\Console\MakeTableCommand;
-use Arados\Settings\Generators\BladeSettingsGenerator;
+use Smartisan\Settings\Console\MakeTableCommand;
+use Smartisan\Settings\Generators\BladeSettingsGenerator;
 
 class SettingsServiceProvider extends ServiceProvider
 {
@@ -17,7 +17,9 @@ class SettingsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->registerSettings();
+
         $this->registerCommands();
+
         $this->registerBladeDirectives();
     }
 
@@ -71,7 +73,9 @@ class SettingsServiceProvider extends ServiceProvider
     protected function registerConfig()
     {
         $path = realpath(__DIR__.'/../config/settings.php');
+
         $this->mergeConfigFrom($path, 'settings');
+
         $this->publishes([$path => config_path('settings.php')], 'config');
     }
 

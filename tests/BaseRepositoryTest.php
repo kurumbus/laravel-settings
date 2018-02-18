@@ -1,6 +1,6 @@
 <?php
 
-namespace Arados\Settings\Test;
+namespace Smartisan\Settings\Test;
 
 use Orchestra\Testbench\TestCase;
 

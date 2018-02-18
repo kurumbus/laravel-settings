@@ -1,10 +1,10 @@
 <?php
 
-namespace Arados\Settings;
+namespace Smartisan\Settings;
 
 use Illuminate\Support\Manager;
-use Arados\Settings\Repositories\JsonRepository;
-use Arados\Settings\Repositories\DatabaseRepository;
+use Smartisan\Settings\Repositories\JsonRepository;
+use Smartisan\Settings\Repositories\DatabaseRepository;
 
 class SettingsManager extends Manager
 {

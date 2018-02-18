@@ -1,6 +1,6 @@
 <?php
 
-namespace Arados\Settings\Contracts;
+namespace Smartisan\Settings\Contracts;
 
 interface Repository
 {

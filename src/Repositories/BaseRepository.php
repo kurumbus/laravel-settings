@@ -1,10 +1,10 @@
 <?php
 
-namespace Arados\Settings\Repositories;
+namespace Smartisan\Settings\Repositories;
 
 use Illuminate\Support\Arr;
-use Arados\Settings\Contracts\Settings;
-use Arados\Settings\Contracts\Repository;
+use Smartisan\Settings\Contracts\Settings;
+use Smartisan\Settings\Contracts\Repository;
 
 abstract class BaseRepository implements Repository
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Arados\Settings\Generators;
+namespace Smartisan\Settings\Generators;
 
 use Illuminate\Support\Arr;
 use Illuminate\Foundation\Application;

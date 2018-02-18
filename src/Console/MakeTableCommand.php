@@ -1,6 +1,6 @@
 <?php
 
-namespace Arados\Settings\Console;
+namespace Smartisan\Settings\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Application;

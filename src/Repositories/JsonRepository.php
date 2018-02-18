@@ -1,6 +1,6 @@
 <?php
 
-namespace Arados\Settings\Repositories;
+namespace Smartisan\Settings\Repositories;
 
 use Illuminate\Filesystem\Filesystem;
 

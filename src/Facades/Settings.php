@@ -1,6 +1,6 @@
 <?php
 
-namespace Arados\Settings\Facades;
+namespace Smartisan\Settings\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

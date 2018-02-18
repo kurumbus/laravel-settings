@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/dt/mohd-isa/laravel-settings.svg)](https://packagist.org/packages/mohd-isa/laravel-settings)
 [![Build Status](https://travis-ci.org/mohd-isa/laravel-settings.svg?branch=master)](https://travis-ci.org/mohd-isa/laravel-settings)
 [![StyleCI](https://styleci.io/repos/100166108/shield)](https://styleci.io/repos/100166108)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Store and manage application wide settings for Laravel 5. Supports multiple and custom storage drivers.
 
@@ -14,15 +14,15 @@ composer require mohd-isa/laravel-settings
 ````
 Add the following service provider to config/app.php
 ````
-Arados\Settings\SettingsServiceProvider::class,
+Smartisan\Settings\SettingsServiceProvider::class,
 ````
 Optionally, add the following facade to your config/app.php facades list
 ````
-'Settings' => Arados\Settings\Facades\Settings::class,
+'Settings' => Smartisan\Settings\Facades\Settings::class,
 ````
-Publish the configurations file to customize the package
+Publish the configurations file to customize the package. This is optional for Laravel 5.5+
 ```
-php artisan vendor:publish --provider="Arados\Settings\SettingsServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Smartisan\Settings\SettingsServiceProvider" --tag="config"
 ```
 If you are going to use database driver, publish the table using the following command
 ```

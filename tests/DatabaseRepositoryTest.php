@@ -1,8 +1,8 @@
 <?php
 
-namespace Arados\Settings\Test;
+namespace Smartisan\Settings\Test;
 
-use Arados\Settings\Repositories\DatabaseRepository;
+use Smartisan\Settings\Repositories\DatabaseRepository;
 
 class DatabaseRepositoryTest extends BaseRepositoryTest
 {
@@ -22,14 +22,14 @@ class DatabaseRepositoryTest extends BaseRepositoryTest
     {
         return [
             'Orchestra\Database\ConsoleServiceProvider',
-            'Arados\Settings\SettingsServiceProvider',
+            'Smartisan\Settings\SettingsServiceProvider',
         ];
     }
 
     protected function getEnvironmentSetUp($app)
     {
-        $app['config']->set('database .default', 'testing');
-        $app['config']->set('database . connections . sqlite', [
+        $app['config']->set('database.default', 'testing');
+        $app['config']->set('database.connections.sqlite', [
             'driver'   => 'sqlite',
             'database' => ':memory:',
             'prefix'   => '',

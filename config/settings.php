@@ -1,6 +1,7 @@
 <?php
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Default Settings Driver
@@ -9,7 +10,7 @@ return [
     | Default settings storage driver. Supported drivers: "json", "database"
     |
     */
-    'default'   => env('SETTINGS_DRIVER', 'database'),
+    'default'   => env('SETTINGS_DRIVER', 'json'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,4 +53,5 @@ return [
             'table' => 'settings',
         ],
     ],
+
 ];

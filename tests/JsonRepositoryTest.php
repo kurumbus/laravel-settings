@@ -1,8 +1,8 @@
 <?php
 
-namespace Arados\Settings\Test;
+namespace Smartisan\Settings\Test;
 
-use Arados\Settings\Repositories\JsonRepository;
+use Smartisan\Settings\Repositories\JsonRepository;
 
 class JsonRepositoryTest extends BaseRepositoryTest
 {
