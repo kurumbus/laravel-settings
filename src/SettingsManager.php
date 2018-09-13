@@ -2,6 +2,7 @@
 
 namespace Smartisan\Settings;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Manager;
 use Smartisan\Settings\Repositories\JsonRepository;
 use Smartisan\Settings\Repositories\DatabaseRepository;
@@ -38,8 +39,9 @@ class SettingsManager extends Manager
     public function createDatabaseDriver()
     {
         $config = $this->config('drivers.database');
+        $connection = isset($config['connection']) ? DB::connection($config['connection']) : $this->app['db'];
 
-        return new DatabaseRepository($this->app['db'], $config['table']);
+        return new DatabaseRepository($connection, $config['table']);
     }
 
     /**
